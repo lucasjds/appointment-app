@@ -24,4 +24,8 @@ export class AppointmentListComponent {
       this.newAppointmentTitle = "";
     }
   }
+
+  deleteAppointment(index: number) {
+    this.appointments.splice(index, 1);
+  }
 }
