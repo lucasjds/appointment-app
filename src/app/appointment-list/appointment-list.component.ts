@@ -9,6 +9,19 @@ import { Appointment } from '../models/appointment';
 export class AppointmentListComponent {
   newAppointmentTitle: string = "";
   newAppointmentDate: Date = new Date();
-  
-  appointment: Appointment[] = []
+
+  appointments: Appointment[] = []
+
+  addAppointment() {
+    if (this.newAppointmentTitle.trim().length && this.newAppointmentDate) {
+      let newAppt: Appointment = {
+        id: Date.now(),
+        title: this.newAppointmentTitle,
+        date: this.newAppointmentDate
+      }
+      this.appointments.push(newAppt)
+      this.newAppointmentDate = new Date();
+      this.newAppointmentTitle = "";
+    }
+  }
 }

@@ -1,5 +1,9 @@
 <div>
-<input [(ngModel)]="newAppointmentTitle" placeholder="Apppointment Desc"/>
-<input [(ngModel)]="newAppointmentDate" type="date" placeholder="Apppointment Date"/>
-<button>Add</button>
+  <input [(ngModel)]="newAppointmentTitle" placeholder="Apppointment Desc" />
+  <input
+    [(ngModel)]="newAppointmentDate"
+    type="date"
+    placeholder="Apppointment Date"
+  />
+  <button (click)="addAppointment()">Add</button>
 </div>
